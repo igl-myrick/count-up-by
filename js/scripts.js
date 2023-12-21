@@ -3,7 +3,7 @@ function calculateResult(num1, num2) {
   for (let i = num2; i <= num1; i += num2) {
     resultArr.push(i);
   }
-  return resultArr;
+  return resultArr.join(", ");
 }
 
 window.addEventListener("load", function() {
@@ -12,6 +12,7 @@ window.addEventListener("load", function() {
 
 function handleForm(e) {
   e.preventDefault();
+  let form = document.querySelector("form");
   let num1 = parseInt(document.getElementById("firstNum").value);
   let num2 = parseInt(document.getElementById("secondNum").value);
   const result = calculateResult(num1, num2)
@@ -19,4 +20,7 @@ function handleForm(e) {
   p.append(result);
   let resultDiv = document.getElementById("results");
   resultDiv.append(p);
+  form.addEventListener("submit", function() {
+    p.remove();
+  })
 }
