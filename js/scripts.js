@@ -1,9 +1,21 @@
 function calculateResult(num1, num2) {
   let resultArr = [];
-  for (let i = num2; i <= num1; i += num2) {
-    resultArr.push(i);
+  let numSign1 = Math.sign(num1);
+  let numSign2 = Math.sign(num2);
+  if (num1 === "" || num2 === "") {
+    return "You need to input two numbers."
+  } else if (num1 === NaN || num2 === NaN) {
+    return "You need to input two numbers."
+  } else if (num2 >= num1) {
+    return "The first number must be larger than the second."
+  } else if ((numSign1 === 0 || numSign2 === 0) || (numSign1 === -1 || numSign2 === -1)) {
+    return "Both numbers must be positive."
+  } else {  
+    for (let i = num2; i <= num1; i += num2) {
+      resultArr.push(i);
+    }
+    return resultArr.join(", ");
   }
-  return resultArr.join(", ");
 }
 
 window.addEventListener("load", function() {
