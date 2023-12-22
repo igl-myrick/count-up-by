@@ -2,20 +2,24 @@
 <html lang="en-US">
 <head>
   <title>Count Up By</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/scripts.js"></script>
 </head>
 <body>
-  <h2>Count Up By</h2>
-  <p>Enter two numbers into the form below. The first number is how far the site will count up to, and the second number will be multiplied until the first number is reached.</p>
-  <form>
-    <label for="firstNum">First number:</label>
-    <input id="firstNum" type="text" name="firstNum" required><br>
-    <label for="secondNum">Second number:</label>
-    <input id="secondNum" type="text" name="secondNum" required><br>
-    <button type="submit">Submit</button>
-  </form>
-  <div id="results">
-
+  <div class="container">
+    <h2>Count Up By</h2>
+    <p>Enter two numbers into the form below. The first number is how far the site will count up to, and the second number will be multiplied until the first number is reached.</p>
+    <form>
+      <label for="firstNum">First number:</label>
+      <input id="firstNum" type="text" name="firstNum" required><br>
+      <label for="secondNum">Second number:</label>
+      <input id="secondNum" type="text" name="secondNum" required><br>
+      <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+    <div id="results">
+  
+    </div>
   </div>
 </body>
 </html>

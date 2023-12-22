@@ -1,0 +1,18 @@
+body {
+  height: 100vh;
+  line-height: 30px;
+  margin-top: 20px;
+  background-image: linear-gradient(to bottom right, #ebebeb, #a3d6eb)
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+#results {
+  font-weight: bold;
+}
+
+.btn {
+  font-style: italic;
+}
